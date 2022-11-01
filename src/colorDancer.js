@@ -8,7 +8,7 @@ ColorDancer.prototype.constructor = ColorDancer;
 
 ColorDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  this.$node.css('border', '10px solid ' + this.randomColor());
+  this.$node.css('background-color', this.randomColor());
 };
 
 ColorDancer.prototype.randomColor = function () {

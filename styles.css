@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('img/dance-floor.png');
+  background-color: #444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -23,4 +24,8 @@ body, a:link, a:visited, a:active{
 .dancer{
   width: 50px;
   position: absolute;
+}
+
+.colorDancer{
+  border-radius: 50px;
 }

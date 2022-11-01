@@ -1,11 +1,15 @@
 var RickRoss = function(top, left, timeBetweenSteps) {
   ColorDancer.call(this, top, left, timeBetweenSteps);
-  var dancer = $('<img class="dancer" src="img/rick-ross.png">');
-  this.$node = $('<span> ' + dancer + '</span>');
+  this.$node = $('<img class="dancer" src="img/rick-ross.png">');
 };
 
 RickRoss.prototype = Object.create(ColorDancer.prototype);
 RickRoss.prototype.constructor = RickRoss;
+
+RickRoss.prototype.step = function() {
+  Dancer.prototype.step.call(this);
+  this.$node.css('background-color', this.randomColor());
+};
 
 var makeRickRoss = function(top, left, timeBetweenSteps) {
   var dancer = new RickRoss(top, left, timeBetweenSteps);
