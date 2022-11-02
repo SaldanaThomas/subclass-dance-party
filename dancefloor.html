@@ -11,16 +11,29 @@
     <script src="src/rickNixon.js"></script>
     <script src="src/rickAstley.js"></script>
     <script src="src/rickSanchez.js"></script>
+    <script src="src/explosion.js"></script>
   </head>
   <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickAstley">add Rick (Astley)</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickRoss">add Rick (Ross)</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickSanchez">add Rick (Sanchez)</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickNixon">add Rick (Nixon)</a>
+    <div class="bar topbar">
+      <span class="title">OBJECT DANCE PARTY
+        <img class="dancerPreview" src="img/rick-nixon.png">
+        <img class="dancerPreview" src="img/rick-sanchez.png">
+        <img class="dancerPreview" src="img/rick-ross.png">
+        <img class="dancerPreview" src="img/rick-astley.png">
+      </span>
     </div>
-
+    <div class="bar dancerbar">
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickAstley">Go Rick! (Astley)</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickRoss">Go Rick! (Ross)</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickSanchez">Go Rick! (Sanchez)</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickNixon">Go Rick! (Nixon)</a>
+  </div>
+    <div class="bar formationbar">
+      <span class="formations">DANCE FORMATIONS</span>
+      <a href="#" class="lineUpButton">Line Up Dancers</a>
+      <a href="#" class="addDancerFormation" data-dancer-formation-function-name="dancerBattle">Dancer Battle</a>
+      <a href="#" class="addDancerFormation" data-dancer-formation-function-name="electricSlide">Electric Slide</a>
+    </div>
     <script src="src/init.js"></script>
   </body>
 </html>

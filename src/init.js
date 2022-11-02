@@ -17,15 +17,33 @@ $(document).ready(function() {
      */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
+
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
     var dancer = dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
+      Math.min(Math.max($('body').height() * Math.random(), 150), $('body').height() - 100),
+      Math.min(Math.max($('body').width() * Math.random(), 100), $('body').height() - 100),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
-});
 
+  $('.lineUpButton').on('click', function(event) {
+    console.log('clicked this');
+    var verticalPosition = 150;
+    var horizontalPosition = 25;
+    var dancersPerCol = 0;
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].setPosition(verticalPosition, horizontalPosition);
+      verticalPosition += 150;
+      dancersPerCol++;
+      if (dancersPerCol > 6) {
+        dancersPerCol = 0;
+        verticalPosition = 150;
+        horizontalPosition += 150;
+      }
+    }
+  });
+});

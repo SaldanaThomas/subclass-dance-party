@@ -18,9 +18,11 @@ Dancer.prototype.step = function() {
 Dancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
+  this.top = top;
+  this.left = left;
   var styleSettings = {
-    top: this.top,
-    left: this.left
+    top: this.top + 'px',
+    left: this.left + 'px'
   };
   this.$node.css(styleSettings);
 };
@@ -30,7 +32,7 @@ Dancer.prototype.setPosition = function(top, left) {
 //                color change    flippy
 //                 /    \          /  \
 //              ross  nixon     sanchez  astley
-//     (grow/shrink)             (spin)   (moving)
+//     (grow/shrink)  (spin)   (moving)
 //
 //hover event                opposite      spin
 //interaction                delete 1

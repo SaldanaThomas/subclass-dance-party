@@ -1,31 +1,78 @@
 body, html{
-  height:100%;
+  height: 100%;
 }
+
 body{
   margin: 0px;
   background-image: url('img/dance-floor.png');
+  background-size: cover;
+  background-repeat: repeat-y;
   background-color: #444;
   font-size: 18px;
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
 .title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+  padding: 5px 12px;
+  float: right;
 }
+
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:45px;
+  background-color: darkblue;
 }
+
+.dancerPreview{
+  height: 40px;
+  width: 40px;
+  padding-left: 40px;
+
+}
+
+.addDancerButton {
+  margin: 0 10px;
+}
+
+.bar {
+  display: block;
+  overflow: auto;
+  padding: 10px;
+  text-align: left;
+}
+
+.dancerbar{
+  background-color: magenta;
+}
+
+.formationbar{
+  background-color: maroon;
+}
+
+.dancers{
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.formations{
+  font-weight: bold;
+  padding-left: 15px;
+}
+
 .title{
-  background-color: #777;
+  font-size: xx-large;
+  font-weight: bold;
+  position: absolute;
+  height: 100px
 }
+
 .dancer{
-  width: 50px;
+  width: 100px;
   position: absolute;
 }
 
-.colorDancer{
-  border-radius: 50px;
+.dancer:hover {
+  width: 500px;
 }
